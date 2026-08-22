@@ -779,6 +779,7 @@ section {
       color: var(--color-secondary);
     }
     .bg-text {
+      opacity: 0.35;
       position: absolute;
       top: 50%;
       left: 50%;
@@ -793,3 +794,176 @@ section {
 }
 
 @import "./media";
+
+/* ---- Skills: claim on the left, where it was used on the right ---- */
+.skills-note {
+  color: var(--color-grey-2);
+  font-size: 0.92rem;
+  max-width: 46rem;
+  margin-bottom: 2rem;
+}
+.skill-groups {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem 3rem;
+}
+.skill-group h5 {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-secondary);
+  margin-bottom: 0.9rem;
+}
+.skill-group ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.skill-group li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem 1rem;
+  padding: 0.55rem 0;
+  border-bottom: 1px solid var(--color-grey-5);
+}
+.skill-group li:last-child {
+  border-bottom: 0;
+}
+.skill-group .sk {
+  color: var(--color-white);
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+.skill-group .ev {
+  color: var(--color-grey-2);
+  font-size: 0.8rem;
+  text-align: right;
+}
+
+/* ---- Client work: typographic cards, no stock photography ---- */
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1.5rem;
+  margin-top: 1rem;
+}
+.work-card {
+  background-color: var(--color-grey-5);
+  border-top: 3px solid var(--color-secondary);
+  border-radius: 8px;
+  padding: 1.4rem 1.5rem;
+  transition: transform 0.3s ease-in-out;
+}
+.work-card:hover {
+  transform: translateY(-4px);
+}
+.work-card h3 {
+  font-size: 1.15rem;
+  color: var(--color-white);
+  margin: 0 0 0.4rem;
+}
+.work-stack {
+  font-size: 0.78rem;
+  letter-spacing: 0.03em;
+  color: var(--color-secondary);
+  margin: 0 0 0.7rem;
+}
+.work-desc {
+  font-size: 0.9rem;
+  line-height: 1.75;
+  color: var(--color-grey-2);
+  margin: 0;
+}
+
+/* ---- Build log ---- */
+.log-entries {
+  display: grid;
+  grid-gap: 1.5rem;
+  margin-top: 1rem;
+}
+.log-entry {
+  background-color: var(--color-grey-5);
+  border-left: 4px solid var(--color-secondary);
+  border-radius: 8px;
+  padding: 1.4rem 1.6rem;
+}
+.log-entry h3 {
+  font-size: 1.15rem;
+  color: var(--color-white);
+  margin: 0 0 0.6rem;
+}
+.log-entry p {
+  color: var(--color-grey-2);
+  line-height: 1.9;
+  margin: 0;
+}
+.log-entry code {
+  /* No background: in light mode --color-white and --color-grey-4 resolve to the
+     same value, so a filled chip renders text invisibly. The accent reads on both
+     card backgrounds without depending on that pair. */
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.88em;
+  color: var(--color-white);
+}
+
+/* Netlify's honeypot: has to exist in the DOM, must never be seen or focusable. */
+.hidden-field {
+  position: absolute;
+  left: -9999px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* The submit control is a real <button> now, so it needs the anchor's button styling. */
+button.main-btn {
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  background: none;
+}
+
+/* ---- Form confirmation page ---- */
+.thanks-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+}
+.thanks-inner h1 {
+  font-size: 2.4rem;
+  color: var(--color-white);
+  margin-bottom: 0.8rem;
+}
+.thanks-inner p {
+  color: var(--color-grey-2);
+  margin-bottom: 2rem;
+}
+.thanks-inner .main-btn {
+  display: inline-block;
+}
+
+@media screen and (max-width: 1250px) {
+  .work-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 970px) {
+  .skill-groups {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .work-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media screen and (max-width: 600px) {
+  .skill-group li {
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+  .skill-group .ev {
+    text-align: left;
+  }
+}
