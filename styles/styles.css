@@ -350,21 +350,6 @@ section {
   transition: all 0.4s ease-in-out;
   width: 60%;
 }
-.about-stats .progress-bars .progress-bar .progress .html {
-  width: 90%;
-}
-.about-stats .progress-bars .progress-bar .progress .css {
-  width: 65%;
-}
-.about-stats .progress-bars .progress-bar .progress .js {
-  width: 80%;
-}
-.about-stats .progress-bars .progress-bar .progress .react {
-  width: 70%;
-}
-.about-stats .progress-bars .progress-bar .progress .golang {
-  width: 60%;
-}
 
 .stat-title {
   text-transform: uppercase;
