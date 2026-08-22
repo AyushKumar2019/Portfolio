@@ -478,6 +478,13 @@ section {
   color: var(--color-white);
   margin-bottom: 1.5rem;
 }
+.portfolios .portfolio-item .hover-items .port-stack {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--color-white);
+  text-align: center;
+  padding: 0 1.5rem;
+}
 .portfolios .portfolio-item .hover-items .icons {
   display: flex;
   justify-content: center;
