@@ -43,10 +43,4 @@ function pageTransitions() {
   });
 }
 
-function submitBtn() {
-  alert(
-    "Submitting information is not supported at this moment\n\nDrop an Email to the above-mentioned email of Ayush"
-  );
-}
-
 pageTransitions();
